@@ -3,8 +3,8 @@ console.log("welcome to the arijit");
 //displaying the song in the page
 arijitsongs = [
     { name: "Apna Bana Le", count: "56,171,373", time: "4:20", src: "https://static-koimoi.akamaized.net/wp-content/new-galleries/2022/12/box-office-bhediya-grows-further-on-sunday-crosses-50-crores-001.jpg" },
-    { name: "Kesariya", count: "224,192,869", time: "4:28", src: "/images/arijit2.jpeg" },
-    { name: "Jhome Jo Pathan", count: "10,843,239", time: "3:28", src: "/images/arijit3.jpg" },
+    { name: "Kesariya", count: "224,192,869", time: "4:28", src: "images/arijit2.jpeg" },
+    { name: "Jhome Jo Pathan", count: "10,843,239", time: "3:28", src: "../images/arijit3.jpg" },
     { name: "Shayad", count: "191,480,566", time: "4:07", src: "/images/arijit4.jpeg" },
     { name: "Khariyat", count: "138,441,672", time: "4:40", src: "/images/arijit5.jpeg" },
     { name: "Agar Tum Sath Ho", count: "192,028,457", time: "5:41", src: "/images/arijit6.webp" },
