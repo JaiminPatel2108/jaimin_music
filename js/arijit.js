@@ -3,15 +3,15 @@ console.log("welcome to the arijit");
 //displaying the song in the page
 arijitsongs = [
     { name: "Apna Bana Le", count: "56,171,373", time: "4:20", src: "https://static-koimoi.akamaized.net/wp-content/new-galleries/2022/12/box-office-bhediya-grows-further-on-sunday-crosses-50-crores-001.jpg" },
-    { name: "Kesariya", count: "224,192,869", time: "4:28", src: "images/arijit2.jpeg" },
+    { name: "Kesariya", count: "224,192,869", time: "4:28", src: "../images/arijit2.jpeg" },
     { name: "Jhome Jo Pathan", count: "10,843,239", time: "3:28", src: "../images/arijit3.jpg" },
-    { name: "Shayad", count: "191,480,566", time: "4:07", src: "/images/arijit4.jpeg" },
-    { name: "Khariyat", count: "138,441,672", time: "4:40", src: "/images/arijit5.jpeg" },
-    { name: "Agar Tum Sath Ho", count: "192,028,457", time: "5:41", src: "/images/arijit6.webp" },
-    { name: "Deva Deva", count: "56,421,806", time: "5:39", src: "/images/arijit7.jpg" },
-    { name: "Raabta", count: "71,204,574", time: "4:03", src: "/images/arijit8.jpg" },
-    { name: "Atak Gaya", count: "47,926,280", time: "4:13", src: "/images/arijt9.jpg" },
-    { name: "Kalank", count: "111,291,610", time: "5:11", src: "/images/arijit10.jpeg" }
+    { name: "Shayad", count: "191,480,566", time: "4:07", src: "../images/arijit4.jpeg" },
+    { name: "Khariyat", count: "138,441,672", time: "4:40", src: "../images/arijit5.jpeg" },
+    { name: "Agar Tum Sath Ho", count: "192,028,457", time: "5:41", src: "../images/arijit6.webp" },
+    { name: "Deva Deva", count: "56,421,806", time: "5:39", src: "../images/arijit7.jpg" },
+    { name: "Raabta", count: "71,204,574", time: "4:03", src: "../images/arijit8.jpg" },
+    { name: "Atak Gaya", count: "47,926,280", time: "4:13", src: "../images/arijt9.jpg" },
+    { name: "Kalank", count: "111,291,610", time: "5:11", src: "../images/arijit10.jpeg" }
 ]
 
 arijitsongs.forEach((e, i) => {
@@ -41,7 +41,7 @@ let songfulltime = document.getElementById("songfulltime")
 let songcurrenttimeupdate = document.getElementById("songcurrenttimeupdate")
 let songindex = 1
 let isvolume = 1
-let audioelement = new Audio(`/songs/arijit${songindex}.mp3`)
+let audioelement = new Audio(`../songs/arijit${songindex}.mp3`)
 
 const nextsongauto = () => {
     audioelement.addEventListener("ended", () => {
@@ -59,7 +59,7 @@ const playbtnfunction = () => {
         playbtn.classList.add("fa-pause")
         issongplay = 1
         let gifindex = document.getElementById(`index${songindex - 1}`)
-        gifindex.innerHTML = `<img class="dancegif" src="/images/dancegif.gif">`
+        gifindex.innerHTML = `<img class="dancegif" src="../images/dancegif.gif">`
         audioelement.play()
         audioelement.volume = 0.5
         songname.innerHTML = `${arijitsongs[songindex - 1].name}`
@@ -119,11 +119,11 @@ nextbtn.addEventListener("click", () => {
         playbtn.classList.remove("fa-play")
         playbtn.classList.add("fa-pause")
         console.log(songindex);
-        audioelement = new Audio(`/songs/arijit${songindex}.mp3`)
+        audioelement = new Audio(`../songs/arijit${songindex}.mp3`)
         audioelement.play()
         makeallindex()
         let gifindex = document.getElementById(`index${songindex - 1}`)
-        gifindex.innerHTML = `<img class="dancegif" src="/images/dancegif.gif">`
+        gifindex.innerHTML = `<img class="dancegif" src="../images/dancegif.gif">`
         audioelement.volume = 0.5
         issongplay = 1
         songname.innerHTML = `${arijitsongs[songindex - 1].name}`
@@ -141,11 +141,11 @@ nextbtn.addEventListener("click", () => {
     }
     else if (issongplay == 1 && songindex < 11) {
         console.log(songindex);
-        audioelement = new Audio(`/songs/arijit${songindex}.mp3`)
+        audioelement = new Audio(`../songs/arijit${songindex}.mp3`)
         audioelement.play()
         makeallindex()
         let gifindex = document.getElementById(`index${songindex - 1}`)
-        gifindex.innerHTML = `<img class="dancegif" src="/images/dancegif.gif">`
+        gifindex.innerHTML = `<img class="dancegif" src="../images/dancegif.gif">`
         let currentsongicon = document.getElementById(`${songindex}songicon`)
         currentsongicon.classList.remove("fa-play")
         currentsongicon.classList.add("fa-pause")
@@ -163,11 +163,11 @@ nextbtn.addEventListener("click", () => {
         console.log("there are some error");
         alert("you are listning the last song of the list")
         songindex = 10
-        audioelement = new Audio(`/songs/arijit${songindex}.mp3`)
+        audioelement = new Audio(`../songs/arijit${songindex}.mp3`)
         audioelement.play()
         makeallindex()
         let gifindex = document.getElementById(`index${songindex - 1}`)
-        gifindex.innerHTML = `<img class="dancegif" src="/images/dancegif.gif">`
+        gifindex.innerHTML = `<img class="dancegif" src="../images/dancegif.gif">`
         let currentsongicon = document.getElementById(`${songindex - 1}songicon`)
         console.log(currentsongicon);
     }
@@ -179,11 +179,11 @@ backbtn.addEventListener("click", () => {
     audioelement.pause()
     if (songindex == 1) {
         alert("you are listening the first song")
-        audioelement = new Audio(`/songs/arijit${songindex}.mp3`)
+        audioelement = new Audio(`../songs/arijit${songindex}.mp3`)
         audioelement.play()
         makeallindex()
         let gifindex = document.getElementById(`index${songindex - 1}`)
-        gifindex.innerHTML = `<img class="dancegif" src="/images/dancegif.gif">`
+        gifindex.innerHTML = `<img class="dancegif" src="../images/dancegif.gif">`
         //next song play automatically
         nextsongauto()
         playbtn.classList.remove("fa-play")
@@ -191,11 +191,11 @@ backbtn.addEventListener("click", () => {
     }
     else if (songindex < 10 || songindex == 10) {
         songindex = songindex - 1
-        audioelement = new Audio(`/songs/arijit${songindex}.mp3`)
+        audioelement = new Audio(`../songs/arijit${songindex}.mp3`)
         audioelement.play()
         makeallindex()
         let gifindex = document.getElementById(`index${songindex - 1}`)
-        gifindex.innerHTML = `<img class="dancegif" src="/images/dancegif.gif">`
+        gifindex.innerHTML = `<img class="dancegif" src="../images/dancegif.gif">`
         audioelement.volume = 0.5
         songname.innerHTML = `${arijitsongs[songindex - 1].name}`
         issongplay = 1
@@ -250,7 +250,7 @@ Array.from(songicon).forEach((e, index) => {
         makeallplay()
         audioelement.pause()
         // makeallindex()
-        audioelement = new Audio(`/songs/arijit${index + 1}.mp3`)
+        audioelement = new Audio(`../songs/arijit${index + 1}.mp3`)
         e.classList.remove("fa-play")
         e.classList.add("fa-pause")
         if (issongplay == 0) {
@@ -267,7 +267,7 @@ Array.from(songicon).forEach((e, index) => {
             songindex = index + 1
             makeallindex()
             let gifindex = document.getElementById(`index${songindex - 1}`)
-            gifindex.innerHTML = `<img class="dancegif" src="/images/dancegif.gif">`
+            gifindex.innerHTML = `<img class="dancegif" src="../images/dancegif.gif">`
 
             //setting time and the range
             timeandrange()
@@ -288,7 +288,7 @@ Array.from(songicon).forEach((e, index) => {
             songindex = index + 1
             makeallindex()
             let gifindex = document.getElementById(`index${songindex - 1}`)
-            gifindex.innerHTML = `<img class="dancegif" src="/images/dancegif.gif">`
+            gifindex.innerHTML = `<img class="dancegif" src="../images/dancegif.gif">`
 
             //setting time and the range
             timeandrange()
